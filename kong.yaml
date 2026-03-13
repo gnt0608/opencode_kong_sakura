@@ -20,6 +20,7 @@ services:
       - name: ai-proxy
         config:
           route_type: llm/v1/chat
+          max_request_body_size: 131072
           auth:
             header_name: Authorization
             header_value: "{vault://env/sakura-ai-auth-header}"
